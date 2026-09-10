@@ -12,16 +12,21 @@ public class ItemTexture : MonoBehaviour
     private BoxCollider2D _boxCollider;
 
 
+    private MeasureScratchCompletion _measureScratchCompletion;
+
+
     // ----- Functions -----
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _boxCollider = GetComponent<BoxCollider2D>();
+        _measureScratchCompletion = GetComponent<MeasureScratchCompletion>();
     }
 
     private void Start()
     {
         MakeTexture();
+        SetCollider();
     }
 
     // ----- Custom Functions -----
@@ -33,6 +38,8 @@ public class ItemTexture : MonoBehaviour
         _spriteRenderer.sprite = sprite;
         MakeTexture();
         SetCollider();
+
+        _measureScratchCompletion.ResetCompletion();
     }
 
     private void MakeTexture()
@@ -60,6 +67,11 @@ public class ItemTexture : MonoBehaviour
     private void SetCollider()
     {
         //Mettre le Collider à la bonne taille
+        float width = _spriteRenderer.bounds.max.x - _spriteRenderer.bounds.min.x;
+        float height = _spriteRenderer.bounds.max.y - _spriteRenderer.bounds.min.y;
+
+
+        _boxCollider.size = new Vector2(width / transform.localScale.x, height / transform.localScale.x);
     }
 
 }
