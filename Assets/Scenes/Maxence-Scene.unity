@@ -467,6 +467,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6249658363939287214, guid: 05fc87115ed765b44a23803dad7cf59a, type: 3}
+      propertyPath: OnCompletion.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249658363939287214, guid: 05fc87115ed765b44a23803dad7cf59a, type: 3}
+      propertyPath: OnCompletion.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249658363939287214, guid: 05fc87115ed765b44a23803dad7cf59a, type: 3}
+      propertyPath: OnCompletion.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8569453494951935696, guid: 05fc87115ed765b44a23803dad7cf59a, type: 3}
       propertyPath: m_Name
       value: Item

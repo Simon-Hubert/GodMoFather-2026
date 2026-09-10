@@ -31,9 +31,9 @@ public class MeasureScratchCompletion : MonoBehaviour
         _cleanPixelCount = 0;
         _dirtyPixelCount = 0;
 
-        for (int i = 0; i <= _itemTexture.Texture.width; i += 1)
+        for (int i = 0; i <= _itemTexture.Texture.width; i += 2)
         {
-            for (int j = 0; j <= _itemTexture.Texture.height; j += 1)
+            for (int j = 0; j <= _itemTexture.Texture.height; j += 2)
             {
                 Color pixelColor = _itemTexture.Texture.GetPixel(i, j);
                 if (pixelColor.r >= .75f)
