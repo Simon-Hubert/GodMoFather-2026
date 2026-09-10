@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public abstract class HookController : MonoBehaviour
 {
-    [SerializeField] private InputActionReference _inputAction;
     [SerializeField] private float _acceleration, _amorti, _frequence, _speed;
 
     private SecondOrderDynamics<float> _dynamics;
@@ -24,18 +23,8 @@ public abstract class HookController : MonoBehaviour
         _dynamics = new SecondOrderDynamics<float>(_frequence, _amorti, _acceleration, 0f, new Linear1D());
         origin = GetOrigin();
     }
-
-    private void OnEnable() {
-        _inputAction.action.performed += Move;
-        _inputAction.action.canceled += Move;
-    }
     
-    private void OnDisable() {
-        _inputAction.action.performed -= Move;
-        _inputAction.action.canceled -= Move;
-    }
-    
-    private void Move(InputAction.CallbackContext obj) {
+    public void Move(InputAction.CallbackContext obj) {
         _input = obj.ReadValue<float>();
     }
 
