@@ -5,10 +5,14 @@ public class Object : MonoBehaviour
 {
     private const float LIFETIME = 12f;
     [SerializeField] private int _score;
+    [SerializeField] private ItemTexture _itemTexture;
+    [SerializeField] private MeasureScratchCompletion _scratchCompletion;
+    [SerializeField] private Sprite _sprite;
 
     public static event Action<int> OnScored;
 
     private void Start() {
+        _itemTexture.SetSprite(_sprite);
         _ = Lifetime();
     }
 
@@ -20,6 +24,6 @@ public class Object : MonoBehaviour
     }
     
     private void WhenDestroyed() {
-        OnScored?.Invoke(_score);
+        OnScored?.Invoke(Mathf.FloorToInt(_score * _scratchCompletion.ScratchCompletion));
     }
 }

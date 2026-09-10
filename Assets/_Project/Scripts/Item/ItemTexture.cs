@@ -66,12 +66,12 @@ public class ItemTexture : MonoBehaviour
 
     private void SetCollider()
     {
-        //Mettre le Collider à la bonne taille
+        //Mettre le Collider ï¿½ la bonne taille
         float width = _spriteRenderer.bounds.max.x - _spriteRenderer.bounds.min.x;
         float height = _spriteRenderer.bounds.max.y - _spriteRenderer.bounds.min.y;
 
 
-        _boxCollider.size = new Vector2(width / transform.localScale.x, height / transform.localScale.x);
+        _boxCollider.size = new Vector2(width / transform.localScale.x, height / transform.localScale.y);
     }
 
 }

@@ -9,24 +9,27 @@ public class ScratchingController : MonoBehaviour
     [Header("Brush Intensity")]
     [SerializeField] private AnimationCurve _brushIntensity;
 
+    [SerializeField] private Transform _hook;
+
 
     // TEMP
     Vector3 _cursorPosition;
-
-
+    
     void Update()
     {
         // TEMP
-        _cursorPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        _cursorPosition = _hook.position;
 
         RaycastHit2D hit = Physics2D.Raycast(_cursorPosition, Vector2.down, 0f, LayerMask.GetMask("Item"));
         if (hit.collider != null)
         {
             //Calcul de la pixel position
             ItemTexture itemTex = hit.transform.gameObject.GetComponent<ItemTexture>();
-            Vector2 collidePosition = hit.transform.worldToLocalMatrix.MultiplyVector(hit.point) * hit.transform.localScale.x - itemTex.SpriteRender.bounds.min;
-            Vector2 percentagePosition = collidePosition / hit.transform.localScale.x;
-
+            Vector2 collidePosition = hit.point - (Vector2)itemTex.SpriteRender.bounds.min;
+            float sizeX = itemTex.SpriteRender.bounds.max.x - itemTex.SpriteRender.bounds.min.x;
+            float sizeY = itemTex.SpriteRender.bounds.max.y - itemTex.SpriteRender.bounds.min.y;
+            Vector2 percentagePosition = new Vector2(collidePosition.x / sizeX, collidePosition.y / sizeY);
+            Debug.Log(collidePosition);
             Vector2 pixelPosition = percentagePosition * new Vector2(itemTex.Texture.width, itemTex.Texture.height);
 
             for (int i = (int)(pixelPosition.x - _circleScratchRadius); i <= pixelPosition.x + _circleScratchRadius; i++)

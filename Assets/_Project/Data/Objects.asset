@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: Objects
   m_EditorClassIdentifier: Assembly-CSharp::ObjectDatabase
   _objectData:
-  - prefab: {fileID: 1059412287053508741, guid: ca506f199ac040846ba8e24ade8f9139, type: 3}
-  - prefab: {fileID: 5829784333983533587, guid: 1ae26625d73e1ba4a8b8ef9cdfebd3a0, type: 3}
+  - prefab: {fileID: 5163986665610185565, guid: 13517536ac82c2c4192fc7af5aca6a69, type: 3}
+  - prefab: {fileID: 5163986665610185565, guid: 5d468896e76240747a5491438f6e7cb0, type: 3}
+  - prefab: {fileID: 5163986665610185565, guid: 7a078d7f5a6e50346b24cd8ad9fc6e54, type: 3}
+  - prefab: {fileID: 5163986665610185565, guid: 8e56a81d4155a2e42a0d23a0d2f16e3b, type: 3}
+  - prefab: {fileID: 5163986665610185565, guid: 73599d8b4c1a06744928052b7dee598b, type: 3}
+  - prefab: {fileID: 5163986665610185565, guid: eafac32bec448a0439e5b44319ff367a, type: 3}
+  - prefab: {fileID: 5163986665610185565, guid: 324a537a48a9d294ab08da27ac846f6a, type: 3}
+  - prefab: {fileID: 5163986665610185565, guid: fc2ed89bdddb76f4182f4a642f814602, type: 3}
+  - prefab: {fileID: 5163986665610185565, guid: 6d6491d9f35dc0c409a798ab245cfc57, type: 3}
+  - prefab: {fileID: 5163986665610185565, guid: 33e0e39820415b04988984dc6452e6c2, type: 3}
