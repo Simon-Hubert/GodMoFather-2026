@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "name": "MainControls",
+    "maps": [
+        {
+            "name": "Main",
+            "id": "454da7f5-8ee7-497a-ba09-063007c49dc8",
+            "actions": [
+                {
+                    "name": "Vertical",
+                    "type": "Value",
+                    "id": "748af20b-b0a0-4817-a247-0b7634615fcd",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                },
+                {
+                    "name": "Horizontal",
+                    "type": "Value",
+                    "id": "7b8210eb-9adb-4845-a4c8-528f8a070c08",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "344953b6-5eea-454b-9a68-950fc6b2a375",
+                    "path": "<Gamepad>/leftStick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Vertical",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8605338b-7dbf-4c9c-9cce-136e9b425731",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
