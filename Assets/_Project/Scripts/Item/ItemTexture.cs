@@ -4,6 +4,7 @@ public class ItemTexture : MonoBehaviour
 {
     // ----- Variables -----
     private SpriteRenderer _spriteRenderer;
+    public SpriteRenderer SpriteRender => _spriteRenderer;
 
     private Texture2D _texture;
     public Texture2D Texture => _texture;
@@ -43,7 +44,7 @@ public class ItemTexture : MonoBehaviour
         int height = Mathf.FloorToInt(endingPoint.y - startingPoint.y);
 
         _texture = new Texture2D(width, height);
-
+        _texture.wrapMode = TextureWrapMode.Clamp;
         for (int i = 0; i < width; i++)
         {
             for (int j = 0; j < height; j++)
