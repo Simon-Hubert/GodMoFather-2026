@@ -37,7 +37,7 @@ public class ScratchingController : MonoBehaviour
                 for (int j = (int)(pixelPosition.y - _circleScratchRadius); j <= pixelPosition.y + _circleScratchRadius; j++)
                 {
                     float pixelDistance = Vector2.Distance(pixelPosition, new Vector2(i, j));
-                    if (pixelDistance <= _circleScratchRadius )
+                    if (pixelDistance <= _circleScratchRadius)
                     {
                         Color pixelColor = itemTex.Texture.GetPixel(i, j);
                         float intensity = _brushIntensity.Evaluate(pixelDistance / _circleScratchRadius);

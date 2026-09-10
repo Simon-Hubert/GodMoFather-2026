@@ -70,6 +70,7 @@ public class ItemTexture : MonoBehaviour
         float width = _spriteRenderer.bounds.max.x - _spriteRenderer.bounds.min.x;
         float height = _spriteRenderer.bounds.max.y - _spriteRenderer.bounds.min.y;
 
+        Debug.Log(_spriteRenderer.bounds.min + " : " + _spriteRenderer.bounds.max);
 
         _boxCollider.size = new Vector2(width / transform.localScale.x, height / transform.localScale.y);
     }
