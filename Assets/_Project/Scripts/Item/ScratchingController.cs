@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,14 +13,21 @@ public class ScratchingController : MonoBehaviour
     [SerializeField] private Transform _hook;
 
     Vector3 _cursorPosition;
+
+    public static event Action _onExitShape;
+    private bool _onShape = false;
     
     void Update()
     {
         _cursorPosition = _hook.position;
 
         RaycastHit2D hit = Physics2D.Raycast(_cursorPosition, Vector2.down, 0f, LayerMask.GetMask("Item"));
-        if (hit.collider != null)
-        {
+        if (hit.collider != null) {
+            IsHovered hovered = hit.transform.GetComponent<IsHovered>();
+            if (hovered && !_onShape) {
+                _onShape = true;
+                hovered.OnEnterShape();
+            }
             //Calcul de la pixel position
             ItemTexture itemTex = hit.transform.gameObject.GetComponent<ItemTexture>();
             Vector2 collidePosition = hit.point - (Vector2)itemTex.SpriteRender.bounds.min;
@@ -44,7 +52,12 @@ public class ScratchingController : MonoBehaviour
                 }
             }
             itemTex.Texture.Apply();
-
+        }
+        else {
+            if (_onShape) {
+                _onShape = false;
+                _onExitShape?.Invoke();
+            }
         }
         
     }
