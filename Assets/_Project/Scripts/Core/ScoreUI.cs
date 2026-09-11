@@ -15,8 +15,8 @@ public class ScoreUI : MonoBehaviour
         Object.OnScored -= Score;
     }
 
-    private void Score(int toAdd) {
-        _score += toAdd;
+    private void Score(ScoreEvent scoreEvent) {
+        _score += scoreEvent.score;
         _text.text = _score.ToString();
     }
 }
