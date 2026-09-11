@@ -5,7 +5,7 @@ public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField] private ObjectDatabase _database;
     [SerializeField] private Transform _conveyorBelt;
-    [SerializeField] private float _interval;
+    public float _interval;
 
     private void Spawn(ObjectData data) {
         GameObject obj = Instantiate(data.prefab, _conveyorBelt, true);
