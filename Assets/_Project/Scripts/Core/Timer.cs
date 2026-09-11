@@ -15,6 +15,14 @@ public class Timer : MonoBehaviour
     [SerializeField] private float _countDownSeconds;
 
     public event Action OnCountDownOver;
+    private bool _timerOver;
+
+    public static Timer Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -24,6 +32,8 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
+        if (_timerOver) return;
+
         if (_seconds <= 0)
         {
             if (_minutes > 0)
@@ -34,6 +44,7 @@ public class Timer : MonoBehaviour
             else
             {
                 OnCountDownOver?.Invoke();
+                _timerOver = true;
             }
         }
 
