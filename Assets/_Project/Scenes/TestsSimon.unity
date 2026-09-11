@@ -779,6 +779,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2047029752}
     m_Modifications:
     - target: {fileID: 1668572377142056335, guid: 36e4f49f334cb404088f3f998a38a7f7, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: -8908685418008817858, guid: 4017cf817269a4b42b00ec801390481f, type: 3}
+    - target: {fileID: 1668572377142056335, guid: 36e4f49f334cb404088f3f998a38a7f7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 10542196}
@@ -874,6 +878,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7877635110160270790, guid: 36e4f49f334cb404088f3f998a38a7f7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1012920498881919643, guid: 55399d3d4b8428d439729ae6b39d545a, type: 3}
     - target: {fileID: 8657617701862756433, guid: 36e4f49f334cb404088f3f998a38a7f7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
