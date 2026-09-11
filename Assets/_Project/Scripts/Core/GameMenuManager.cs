@@ -7,7 +7,7 @@ public class GameMenuManager : MonoBehaviour
     
     public void Replay()
     {
-        SceneManager.LoadScene("TestsSimon");
+        SceneManager.LoadSceneAsync("TestsSimon");
     }
 
     public void QuitGame()

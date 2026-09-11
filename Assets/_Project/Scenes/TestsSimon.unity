@@ -238,6 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BeltAccelerator
   _speed: {x: 2, y: 6.7603307}
   _interval: {x: 1.0198348, y: 5}
+  _lifeTime: {x: 2.5041323, y: 7.3636365}
   _duration: 30
   _curve:
     serializedVersion: 2

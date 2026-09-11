@@ -10,7 +10,7 @@ public struct ScoreEvent
 
 public class Object : MonoBehaviour
 {
-    private const float LIFETIME = 12f;
+    public static float LIFETIME = 12f;
     [SerializeField] private int _score;
     [SerializeField] private ItemTexture _itemTexture;
     [SerializeField] private MeasureScratchCompletion _scratchCompletion;
@@ -23,6 +23,13 @@ public class Object : MonoBehaviour
     [SerializeField] private UnityEvent _onMissed;
 
     public static event Action<ScoreEvent> OnScored;
+
+    private Vector3 lastPos;
+
+    private void Update() {
+        if ((lastPos-transform.position).magnitude < Mathf.Epsilon) Destroy(gameObject);
+        lastPos = transform.position;
+    }
 
     private void Start() {
         _itemTexture.SetSprite(_sprite);
