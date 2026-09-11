@@ -36,6 +36,18 @@ PrefabInstance:
       propertyPath: _onFinshed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -4792658336698445862, guid: ca506f199ac040846ba8e24ade8f9139, type: 3}
+      propertyPath: _onFinshed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: -4792658336698445862, guid: ca506f199ac040846ba8e24ade8f9139, type: 3}
+      propertyPath: _onFinshed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: -4792658336698445862, guid: ca506f199ac040846ba8e24ade8f9139, type: 3}
+      propertyPath: _onFinshed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1059412287053508741, guid: ca506f199ac040846ba8e24ade8f9139, type: 3}
       propertyPath: m_Name
       value: Item2
@@ -112,6 +124,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4088144695865659119, guid: 069d9663fdc251c46a59fc958bc1b36d, type: 3}
+    - target: {fileID: 8895968054956390912, guid: ca506f199ac040846ba8e24ade8f9139, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

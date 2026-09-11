@@ -20,6 +20,7 @@ public class Object : MonoBehaviour
 
     [SerializeField] private UnityEvent _onFinshed;
     [SerializeField] private UnityEvent _onPerfect;
+    [SerializeField] private UnityEvent _onMissed;
 
     public static event Action<ScoreEvent> OnScored;
 
@@ -40,6 +41,7 @@ public class Object : MonoBehaviour
         if (_scratchCompletion.ScratchCompletion == 0)
         {
             OnScored?.Invoke(new ScoreEvent{score = Mathf.FloorToInt(_score * 0), threshold = 0});
+            _onMissed?.Invoke();
         }
         else if (_scratchCompletion.ScratchCompletion < Mathf.Lerp(0, _scaledPercentage, 0.75f))
         {

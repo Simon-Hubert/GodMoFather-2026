@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Objects 1
   m_EditorClassIdentifier: Assembly-CSharp::ObjectDatabase
   _objectData:
-  - prefab: {fileID: 5163986665610185565, guid: 7a078d7f5a6e50346b24cd8ad9fc6e54, type: 3}
+  - prefab: {fileID: 5163986665610185565, guid: 5d468896e76240747a5491438f6e7cb0, type: 3}
