@@ -31,7 +31,7 @@ public class Object : MonoBehaviour
     private async Awaitable Lifetime() {
         await Awaitable.WaitForSecondsAsync(LIFETIME);
         WhenDestroyed();
-        await Awaitable.EndOfFrameAsync();
+        await Awaitable.WaitForSecondsAsync(1f);
         Destroy(gameObject);
     }
     
