@@ -6,7 +6,7 @@ public class ConveyorUI : MonoBehaviour
     [SerializeField] private Vector3 _startPosition;
     [SerializeField] private Vector3 _endPosition;
 
-    [SerializeField] private float _speed;
+    public float _speed;
 
     private void Update()
     {
