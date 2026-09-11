@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: _sprite
       value: 
       objectReference: {fileID: -5326703000338352748, guid: 5078df41892837b4383e01b5b2fc81fc, type: 3}
+    - target: {fileID: -4792658336698445862, guid: ca506f199ac040846ba8e24ade8f9139, type: 3}
+      propertyPath: _scaledPercentage
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1059412287053508741, guid: ca506f199ac040846ba8e24ade8f9139, type: 3}
       propertyPath: m_Name
       value: Item7
@@ -42,11 +46,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4509960926072991632, guid: ca506f199ac040846ba8e24ade8f9139, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.0025736
       objectReference: {fileID: 0}
     - target: {fileID: 4509960926072991632, guid: ca506f199ac040846ba8e24ade8f9139, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -7.8939652
       objectReference: {fileID: 0}
     - target: {fileID: 4509960926072991632, guid: ca506f199ac040846ba8e24ade8f9139, type: 3}
       propertyPath: m_LocalPosition.z

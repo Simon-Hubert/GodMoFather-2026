@@ -9,6 +9,8 @@ public class Object : MonoBehaviour
     [SerializeField] private MeasureScratchCompletion _scratchCompletion;
     [SerializeField] private Sprite _sprite;
 
+    [SerializeField] private float _scaledPercentage;
+
     public static event Action<int> OnScored;
 
     private void Start() {
@@ -24,6 +26,18 @@ public class Object : MonoBehaviour
     }
     
     private void WhenDestroyed() {
-        OnScored?.Invoke(Mathf.FloorToInt(_score * _scratchCompletion.ScratchCompletion));
+        
+        if (_scratchCompletion.ScratchCompletion == 0)
+        {
+            OnScored?.Invoke(Mathf.FloorToInt(_score * 0));
+        }
+        else if (_scratchCompletion.ScratchCompletion < Mathf.Lerp(0, _scaledPercentage, 0.75f))
+        {
+            OnScored?.Invoke(Mathf.FloorToInt(_score * .5f));
+        }
+        else if (_scratchCompletion.ScratchCompletion >= Mathf.Lerp(0, _scaledPercentage, 0.75f))
+        {
+            OnScored?.Invoke(Mathf.FloorToInt(_score));
+        }
     }
 }

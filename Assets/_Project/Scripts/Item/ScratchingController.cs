@@ -11,13 +11,10 @@ public class ScratchingController : MonoBehaviour
 
     [SerializeField] private Transform _hook;
 
-
-    // TEMP
     Vector3 _cursorPosition;
     
     void Update()
     {
-        // TEMP
         _cursorPosition = _hook.position;
 
         RaycastHit2D hit = Physics2D.Raycast(_cursorPosition, Vector2.down, 0f, LayerMask.GetMask("Item"));
@@ -29,7 +26,6 @@ public class ScratchingController : MonoBehaviour
             float sizeX = itemTex.SpriteRender.bounds.max.x - itemTex.SpriteRender.bounds.min.x;
             float sizeY = itemTex.SpriteRender.bounds.max.y - itemTex.SpriteRender.bounds.min.y;
             Vector2 percentagePosition = new Vector2(collidePosition.x / sizeX, collidePosition.y / sizeY);
-            Debug.Log(collidePosition);
             Vector2 pixelPosition = percentagePosition * new Vector2(itemTex.Texture.width, itemTex.Texture.height);
 
             for (int i = (int)(pixelPosition.x - _circleScratchRadius); i <= pixelPosition.x + _circleScratchRadius; i++)
