@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public struct ScoreEvent
 {
@@ -16,6 +17,9 @@ public class Object : MonoBehaviour
     [SerializeField] private Sprite _sprite;
 
     [SerializeField] private float _scaledPercentage;
+
+    [SerializeField] private UnityEvent _onFinshed;
+    [SerializeField] private UnityEvent _onPerfect;
 
     public static event Action<ScoreEvent> OnScored;
 
@@ -44,6 +48,9 @@ public class Object : MonoBehaviour
         else if (_scratchCompletion.ScratchCompletion >= Mathf.Lerp(0, _scaledPercentage, 0.75f))
         {
             OnScored?.Invoke(new ScoreEvent{score = Mathf.FloorToInt(_score), threshold = 2});
+            _onPerfect?.Invoke();
         }
+        
+        _onFinshed?.Invoke();
     }
 }
