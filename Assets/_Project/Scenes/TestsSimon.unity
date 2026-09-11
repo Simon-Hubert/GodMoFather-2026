@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 10542193}
   - component: {fileID: 10542195}
   - component: {fileID: 10542196}
+  - component: {fileID: 10542197}
   m_Layer: 0
   m_Name: MANAGER
   m_TagString: Untagged
@@ -223,6 +224,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3b151b0e7101540a8d3e156cd34269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameMenuManager
+--- !u!114 &10542197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10542192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa400a5125d674844919c12f8e339b9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BeltAccelerator
+  _speed: {x: 2, y: 6.7603307}
+  _interval: {x: 1.0198348, y: 5}
+  _duration: 30
+  _curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _belt: {fileID: 1745050770}
+  _ui1: {fileID: 2042292411}
+  _ui2: {fileID: 1159612374}
+  _spawner: {fileID: 1384440609}
 --- !u!1 &71067796
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   _countDownMinutes: 0
-  _countDownSeconds: 10
+  _countDownSeconds: 30
 --- !u!4 &265657451
 Transform:
   m_ObjectHideFlags: 0
