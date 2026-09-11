@@ -6,6 +6,7 @@ public class ScoreUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text _text;
     private int _score;
+    public int TotalScore => _score;
 
     private void OnEnable() {
         Object.OnScored += Score;

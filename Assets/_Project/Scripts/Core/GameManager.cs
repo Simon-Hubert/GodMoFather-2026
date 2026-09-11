@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ObjectSpawner _spawner;
     [SerializeField] private VFXHandler _vfxHandler;
 
+    [SerializeField] private GameObject _finalScorePanel;
+    [SerializeField] private FinalScoreUI _scoreUI;
+
+    [SerializeField] private GameObject _baseScorePanel;
+
     private void Start()
     {
         Timer.Instance.OnCountDownOver += EndGame;
@@ -21,6 +26,11 @@ public class GameManager : MonoBehaviour
         _verticalController.enabled = false;
         _spawner.enabled = false;
         _vfxHandler.enabled = false;
+
+        _baseScorePanel.SetActive(false);
+
+        _finalScorePanel.SetActive(true);
+        _scoreUI.SetScore();
     }
 
 }
