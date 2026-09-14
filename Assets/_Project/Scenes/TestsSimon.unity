@@ -239,7 +239,7 @@ MonoBehaviour:
   _speed: {x: 2, y: 6.7603307}
   _interval: {x: 1.0198348, y: 5}
   _lifeTime: {x: 2.5041323, y: 7.3636365}
-  _duration: 30
+  _duration: 80
   _curve:
     serializedVersion: 2
     m_Curve:
@@ -798,8 +798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bff3d8df1454d4c9fc45fe0714d226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  _countDownMinutes: 0
-  _countDownSeconds: 30
+  _countDownMinutes: 1
+  _countDownSeconds: 20
 --- !u!4 &265657451
 Transform:
   m_ObjectHideFlags: 0
@@ -2008,10 +2008,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da91ed97ea245b14d930317b18134330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HookControllerVertical
-  _acceleration: 2
+  _acceleration: 1.7
   _amorti: 0.75
   _frequence: 1
-  _speed: 0.75
+  _speed: 0.4
 --- !u!114 &1063359414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2024,10 +2024,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3171fc0408b1de8409fdd71a51f6ccc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HookControllerHorizontal
-  _acceleration: 2
+  _acceleration: 1.7
   _amorti: 0.75
   _frequence: 1
-  _speed: 0.75
+  _speed: 0.4
 --- !u!224 &1071032963 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5977359481983799169, guid: 36e4f49f334cb404088f3f998a38a7f7, type: 3}
